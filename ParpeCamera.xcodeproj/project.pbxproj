@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C30D16CC1DB6F3990014FBD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D16CB1DB6F3990014FBD2 /* AppDelegate.swift */; };
+		C30D16CE1DB6F3990014FBD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D16CD1DB6F3990014FBD2 /* ViewController.swift */; };
+		C30D16D11DB6F3990014FBD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30D16CF1DB6F3990014FBD2 /* Main.storyboard */; };
+		C30D16D31DB6F3990014FBD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C30D16D21DB6F3990014FBD2 /* Assets.xcassets */; };
+		C30D16D61DB6F3990014FBD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30D16D41DB6F3990014FBD2 /* LaunchScreen.storyboard */; };
+		C30D16E11DB6F3990014FBD2 /* ParpeCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D16E01DB6F3990014FBD2 /* ParpeCameraTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C30D16DD1DB6F3990014FBD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C30D16C01DB6F3980014FBD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C30D16C71DB6F3980014FBD2;
+			remoteInfo = ParpeCamera;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C30D16C81DB6F3980014FBD2 /* ParpeCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParpeCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C30D16CB1DB6F3990014FBD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C30D16CD1DB6F3990014FBD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C30D16D01DB6F3990014FBD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C30D16D21DB6F3990014FBD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C30D16D51DB6F3990014FBD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C30D16D71DB6F3990014FBD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C30D16DC1DB6F3990014FBD2 /* ParpeCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParpeCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C30D16E01DB6F3990014FBD2 /* ParpeCameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParpeCameraTests.swift; sourceTree = "<group>"; };
+		C30D16E21DB6F3990014FBD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C30D16C51DB6F3980014FBD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C30D16D91DB6F3990014FBD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C30D16BF1DB6F3980014FBD2 = {
+			isa = PBXGroup;
+			children = (
+				C30D16CA1DB6F3990014FBD2 /* ParpeCamera */,
+				C30D16DF1DB6F3990014FBD2 /* ParpeCameraTests */,
+				C30D16C91DB6F3980014FBD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C30D16C91DB6F3980014FBD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C30D16C81DB6F3980014FBD2 /* ParpeCamera.app */,
+				C30D16DC1DB6F3990014FBD2 /* ParpeCameraTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C30D16CA1DB6F3990014FBD2 /* ParpeCamera */ = {
+			isa = PBXGroup;
+			children = (
+				C30D16CB1DB6F3990014FBD2 /* AppDelegate.swift */,
+				C30D16CD1DB6F3990014FBD2 /* ViewController.swift */,
+				C30D16CF1DB6F3990014FBD2 /* Main.storyboard */,
+				C30D16D21DB6F3990014FBD2 /* Assets.xcassets */,
+				C30D16D41DB6F3990014FBD2 /* LaunchScreen.storyboard */,
+				C30D16D71DB6F3990014FBD2 /* Info.plist */,
+			);
+			path = ParpeCamera;
+			sourceTree = "<group>";
+		};
+		C30D16DF1DB6F3990014FBD2 /* ParpeCameraTests */ = {
+			isa = PBXGroup;
+			children = (
+				C30D16E01DB6F3990014FBD2 /* ParpeCameraTests.swift */,
+				C30D16E21DB6F3990014FBD2 /* Info.plist */,
+			);
+			path = ParpeCameraTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C30D16C71DB6F3980014FBD2 /* ParpeCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C30D16E51DB6F3990014FBD2 /* Build configuration list for PBXNativeTarget "ParpeCamera" */;
+			buildPhases = (
+				C30D16C41DB6F3980014FBD2 /* Sources */,
+				C30D16C51DB6F3980014FBD2 /* Frameworks */,
+				C30D16C61DB6F3980014FBD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParpeCamera;
+			productName = ParpeCamera;
+			productReference = C30D16C81DB6F3980014FBD2 /* ParpeCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C30D16DB1DB6F3990014FBD2 /* ParpeCameraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C30D16E81DB6F3990014FBD2 /* Build configuration list for PBXNativeTarget "ParpeCameraTests" */;
+			buildPhases = (
+				C30D16D81DB6F3990014FBD2 /* Sources */,
+				C30D16D91DB6F3990014FBD2 /* Frameworks */,
+				C30D16DA1DB6F3990014FBD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C30D16DE1DB6F3990014FBD2 /* PBXTargetDependency */,
+			);
+			name = ParpeCameraTests;
+			productName = ParpeCameraTests;
+			productReference = C30D16DC1DB6F3990014FBD2 /* ParpeCameraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C30D16C01DB6F3980014FBD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Diego Cavalcante Costa";
+				TargetAttributes = {
+					C30D16C71DB6F3980014FBD2 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					C30D16DB1DB6F3990014FBD2 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = C30D16C71DB6F3980014FBD2;
+					};
+				};
+			};
+			buildConfigurationList = C30D16C31DB6F3980014FBD2 /* Build configuration list for PBXProject "ParpeCamera" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C30D16BF1DB6F3980014FBD2;
+			productRefGroup = C30D16C91DB6F3980014FBD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C30D16C71DB6F3980014FBD2 /* ParpeCamera */,
+				C30D16DB1DB6F3990014FBD2 /* ParpeCameraTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C30D16C61DB6F3980014FBD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C30D16D61DB6F3990014FBD2 /* LaunchScreen.storyboard in Resources */,
+				C30D16D31DB6F3990014FBD2 /* Assets.xcassets in Resources */,
+				C30D16D11DB6F3990014FBD2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C30D16DA1DB6F3990014FBD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C30D16C41DB6F3980014FBD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C30D16CE1DB6F3990014FBD2 /* ViewController.swift in Sources */,
+				C30D16CC1DB6F3990014FBD2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C30D16D81DB6F3990014FBD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C30D16E11DB6F3990014FBD2 /* ParpeCameraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C30D16DE1DB6F3990014FBD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C30D16C71DB6F3980014FBD2 /* ParpeCamera */;
+			targetProxy = C30D16DD1DB6F3990014FBD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C30D16CF1DB6F3990014FBD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C30D16D01DB6F3990014FBD2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C30D16D41DB6F3990014FBD2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C30D16D51DB6F3990014FBD2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C30D16E31DB6F3990014FBD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C30D16E41DB6F3990014FBD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C30D16E61DB6F3990014FBD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ParpeCamera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.diego.cavalcante.ParpeCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C30D16E71DB6F3990014FBD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ParpeCamera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.diego.cavalcante.ParpeCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C30D16E91DB6F3990014FBD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ParpeCameraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.diego.cavalcante.ParpeCameraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParpeCamera.app/ParpeCamera";
+			};
+			name = Debug;
+		};
+		C30D16EA1DB6F3990014FBD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ParpeCameraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.diego.cavalcante.ParpeCameraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParpeCamera.app/ParpeCamera";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C30D16C31DB6F3980014FBD2 /* Build configuration list for PBXProject "ParpeCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C30D16E31DB6F3990014FBD2 /* Debug */,
+				C30D16E41DB6F3990014FBD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C30D16E51DB6F3990014FBD2 /* Build configuration list for PBXNativeTarget "ParpeCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C30D16E61DB6F3990014FBD2 /* Debug */,
+				C30D16E71DB6F3990014FBD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C30D16E81DB6F3990014FBD2 /* Build configuration list for PBXNativeTarget "ParpeCameraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C30D16E91DB6F3990014FBD2 /* Debug */,
+				C30D16EA1DB6F3990014FBD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C30D16C01DB6F3980014FBD2 /* Project object */;
+}
