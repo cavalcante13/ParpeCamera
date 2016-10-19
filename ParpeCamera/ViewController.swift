@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ParpeCameraDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +21,13 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func openCamera(sender: AnyObject) {
+        let parpeCamera = ParpeCameraNavigationController.newParpeCameraDelegate(self)
+        self.presentViewController(parpeCamera, animated: true, completion: nil)
+    }
+    
+    func didSelectPhoto(image: UIImage) {
+        
+    }
 }
 
