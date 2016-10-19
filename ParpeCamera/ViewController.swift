@@ -21,12 +21,12 @@ class ViewController: UIViewController, ParpeCameraDelegate {
     }
 
 
-    @IBAction func openCamera(sender: AnyObject) {
+    @IBAction func openCamera(_ sender: AnyObject) {
         let parpeCamera = ParpeCameraNavigationController.newParpeCameraDelegate(self)
-        self.presentViewController(parpeCamera, animated: true, completion: nil)
+        self.present(parpeCamera, animated: true, completion: nil)
     }
     
-    func didSelectPhoto(image: UIImage) {
+    func didSelectPhoto(_ image: UIImage) {
         
     }
 }

@@ -12,22 +12,23 @@ import AVFoundation
 @IBDesignable
 class ParpeCameraView: UIView {
     
-    private lazy var captureSession : AVCaptureSession? = {
+    fileprivate lazy var captureSession : AVCaptureSession? = {
         let session = AVCaptureSession()
-        session.sessionPreset = AVCaptureSessionPresetMedium
+        session.sessionPreset = AVCaptureSessionPresetHigh
         return session
     }()
-    private lazy var previewLayer : AVCaptureVideoPreviewLayer = {
+    fileprivate lazy var previewLayer : AVCaptureVideoPreviewLayer = {
         let preview = AVCaptureVideoPreviewLayer(session: self.captureSession)
-        return preview
+        return preview!
     }()
-    private lazy var captureDevice : AVCaptureDevice? = {
-        let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
-        device.focusMode = .Locked
-        device.unlockForConfiguration()
+    fileprivate lazy var captureDevice : AVCaptureDevice? = {
+        let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+        try? device?.lockForConfiguration()
+        device?.focusMode = .locked
+        device?.unlockForConfiguration()
         return device
     }()
-    private lazy var captureView: UIView = {
+    fileprivate lazy var captureView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -35,6 +36,7 @@ class ParpeCameraView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+    
         setupInitialization()
     }
     required init?(coder aDecoder: NSCoder) {
@@ -46,12 +48,12 @@ class ParpeCameraView: UIView {
 }
 extension ParpeCameraView {
 
-    private func setupInitialization() {
+    fileprivate func setupInitialization() {
         translatesAutoresizingMaskIntoConstraints = false
         
         for device in AVCaptureDevice.devices() {
-            if device.hasMediaType(AVMediaTypeVideo) {
-                if device.position == AVCaptureDevicePosition.Back {
+            if (device as AnyObject).hasMediaType(AVMediaTypeVideo) {
+                if (device as AnyObject).position == AVCaptureDevicePosition.back {
                     self.captureDevice = device as? AVCaptureDevice
                     if self.captureDevice != nil {
                         print("Capture Device found")
@@ -64,7 +66,7 @@ extension ParpeCameraView {
 }
 
 extension ParpeCameraView {
-    private func startSession() {
+    fileprivate func startSession() {
         do {
             try self.captureSession?.addInput(AVCaptureDeviceInput(device: self.captureDevice))
         }catch let error as NSError {

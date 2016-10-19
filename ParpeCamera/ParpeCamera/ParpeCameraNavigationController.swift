@@ -11,16 +11,16 @@ import AVFoundation
 
 class ParpeCameraNavigationController: UINavigationController {
     
-    static func newParpeCameraDelegate(delegate : ParpeCameraDelegate)-> ParpeCameraNavigationController {
+    static func newParpeCameraDelegate(_ delegate : ParpeCameraDelegate)-> ParpeCameraNavigationController {
         let parpeCamera = ParpeCameraNavigationController()
-        parpeCamera.navigationBarHidden = true
+        parpeCamera.isNavigationBarHidden = true
         
-        let status = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo)
+        let status = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
         switch status {
-        case .Authorized:
+        case .authorized:
             parpeCamera.setupAuthorizationDelegate(delegate)
             break
-        case .NotDetermined:
+        case .notDetermined:
             parpeCamera.setupAuthorizationDelegate(delegate)
             break
         default:
@@ -30,7 +30,7 @@ class ParpeCameraNavigationController: UINavigationController {
         return parpeCamera
     }
     
-    func setupAuthorizationDelegate(delegate : ParpeCameraDelegate) {
+    func setupAuthorizationDelegate(_ delegate : ParpeCameraDelegate) {
         let parpeCameraViewController = ParpeCameraViewController()
         parpeCameraViewController.delegate = delegate
         
@@ -39,14 +39,14 @@ class ParpeCameraNavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .Fade)
+        UIApplication.shared.setStatusBarHidden(true, with: .fade)
     }
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
+        UIApplication.shared.setStatusBarHidden(false, with: .fade)
     }
 
-    override func shouldAutorotate() -> Bool {
+    override var shouldAutorotate : Bool {
         return false
     }
 }

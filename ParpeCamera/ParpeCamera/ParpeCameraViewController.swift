@@ -8,17 +8,17 @@
 
 import UIKit
 protocol ParpeCameraDelegate: class {
-    func didSelectPhoto(image: UIImage)
+    func didSelectPhoto(_ image: UIImage)
 }
 
 class ParpeCameraViewController: UIViewController {
     weak var delegate : ParpeCameraDelegate?
     
-    private lazy var cameraView : ParpeCameraView = {
-        return ParpeCameraView(frame: .zero)
+    fileprivate lazy var cameraView : ParpeCameraView = {
+        return ParpeCameraView(frame: CGRect(x: 0, y: 0, width: 320, height: 400))
     }()
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     required init?(coder aDecoder: NSCoder) {
@@ -29,10 +29,5 @@ class ParpeCameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(cameraView)
-        
-        
-        
     }
-
-    
 }
