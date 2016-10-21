@@ -106,8 +106,8 @@
 		C30D16EC1DB6FF240014FBD2 /* ParpeCamera */ = {
 			isa = PBXGroup;
 			children = (
-				C30D16EF1DB6FF5F0014FBD2 /* ParpeCameraViewController.swift */,
 				C30D16F11DB706F50014FBD2 /* ParpeCameraNavigationController.swift */,
+				C30D16EF1DB6FF5F0014FBD2 /* ParpeCameraViewController.swift */,
 				C3015D761DB7123800634C5C /* ParpeCameraView.swift */,
 			);
 			path = ParpeCamera;

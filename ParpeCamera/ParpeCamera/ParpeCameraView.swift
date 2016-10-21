@@ -34,6 +34,24 @@ class ParpeCameraView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    fileprivate lazy var shotView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor.clear
+        return view
+    }()
+    fileprivate lazy var shotLayer : CAShapeLayer =  {
+        let circlePath = UIBezierPath(arcCenter: .zero, radius: 35, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = circlePath.cgPath
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = UIColor.white.cgColor
+        shapeLayer.borderColor = UIColor.gray.cgColor
+        shapeLayer.lineWidth = 7.0
+        return shapeLayer
+    }()
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -64,16 +82,18 @@ extension ParpeCameraView {
     fileprivate func startSession() {
         do {
             try self.captureSession?.addInput(AVCaptureDeviceInput(device: self.captureDevice))
+            setupInterface()
+            self.captureSession?.startRunning()
         }catch let error as NSError {
             print(error.localizedDescription)
+            return
         }
-        setupInterface()
-        self.captureSession?.startRunning()
     }
 }
 extension ParpeCameraView {
     fileprivate func setupInterface() {
         addSubview(self.captureView)
+        addSubview(self.shotView)
         NSLayoutConstraint.activate([
             self.captureView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
             self.captureView.leadingAnchor.constraint(equalTo:  self.leadingAnchor, constant: 0),
@@ -85,6 +105,27 @@ extension ParpeCameraView {
         super.layoutSubviews()
         self.previewLayer.frame = self.captureView.frame
         self.captureView.layer.addSublayer(self.previewLayer)
+        self.shotView.layer.addSublayer(self.shotLayer)
+        layoutShotView()
+    }
+    
+    fileprivate func layoutShotView() {
+        let centerX = NSLayoutConstraint.init(item: self.shotView,
+                                              attribute: NSLayoutAttribute.centerX,
+                                              relatedBy: NSLayoutRelation.equal,
+                                              toItem: self.captureView,
+                                              attribute: NSLayoutAttribute.centerX,
+                                              multiplier: 1,
+                                              constant: 0)
+        let bottom = NSLayoutConstraint.init(item:  self.shotView,
+                                              attribute: NSLayoutAttribute.top,
+                                              relatedBy: NSLayoutRelation.equal,
+                                              toItem: self.captureView,
+                                              attribute: NSLayoutAttribute.bottomMargin,
+                                              multiplier: 1,
+                                              constant: -40)
+      
+        addConstraints([bottom, centerX])
     }
 }
 
