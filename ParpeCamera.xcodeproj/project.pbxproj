@@ -16,6 +16,8 @@
 		C30D16E11DB6F3990014FBD2 /* ParpeCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D16E01DB6F3990014FBD2 /* ParpeCameraTests.swift */; };
 		C30D16F01DB6FF5F0014FBD2 /* ParpeCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D16EF1DB6FF5F0014FBD2 /* ParpeCameraViewController.swift */; };
 		C30D16F21DB706F50014FBD2 /* ParpeCameraNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D16F11DB706F50014FBD2 /* ParpeCameraNavigationController.swift */; };
+		C3B1DEBF1DBB088E00B41F33 /* ParpeCameraShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1DEBE1DBB088E00B41F33 /* ParpeCameraShot.swift */; };
+		C3B1DEC11DBB0D0700B41F33 /* ParpeCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1DEC01DBB0D0700B41F33 /* ParpeCamera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		C30D16E21DB6F3990014FBD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C30D16EF1DB6FF5F0014FBD2 /* ParpeCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParpeCameraViewController.swift; sourceTree = "<group>"; };
 		C30D16F11DB706F50014FBD2 /* ParpeCameraNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParpeCameraNavigationController.swift; sourceTree = "<group>"; };
+		C3B1DEBE1DBB088E00B41F33 /* ParpeCameraShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParpeCameraShot.swift; sourceTree = "<group>"; };
+		C3B1DEC01DBB0D0700B41F33 /* ParpeCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParpeCamera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				C30D16F11DB706F50014FBD2 /* ParpeCameraNavigationController.swift */,
 				C30D16EF1DB6FF5F0014FBD2 /* ParpeCameraViewController.swift */,
 				C3015D761DB7123800634C5C /* ParpeCameraView.swift */,
+				C3B1DEBE1DBB088E00B41F33 /* ParpeCameraShot.swift */,
+				C3B1DEC01DBB0D0700B41F33 /* ParpeCamera.swift */,
 			);
 			path = ParpeCamera;
 			sourceTree = "<group>";
@@ -219,9 +225,11 @@
 			files = (
 				C30D16CE1DB6F3990014FBD2 /* ViewController.swift in Sources */,
 				C3015D771DB7123800634C5C /* ParpeCameraView.swift in Sources */,
+				C3B1DEC11DBB0D0700B41F33 /* ParpeCamera.swift in Sources */,
 				C30D16F21DB706F50014FBD2 /* ParpeCameraNavigationController.swift in Sources */,
 				C30D16CC1DB6F3990014FBD2 /* AppDelegate.swift in Sources */,
 				C30D16F01DB6FF5F0014FBD2 /* ParpeCameraViewController.swift in Sources */,
+				C3B1DEBF1DBB088E00B41F33 /* ParpeCameraShot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
