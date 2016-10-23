@@ -47,6 +47,6 @@ class ParpeCameraNavigationController: UINavigationController {
     }
 
     override var shouldAutorotate : Bool {
-        return false
+        return true
     }
 }
