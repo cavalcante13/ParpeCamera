@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-
+import QuartzCore
 
 protocol ParpeCameraDelegate: class {
     func didSelectPhoto(_ image: UIImage)
@@ -34,6 +34,14 @@ class ParpeCameraViewController: UIViewController {
         let closeButton = UIButton(type: UIButtonType.custom)
         closeButton.setImage(UIImage(named: "close"), for: UIControlState.normal)
         closeButton.addTarget(self, action: #selector(ParpeCameraViewController.dismissViewController), for: UIControlEvents.touchUpInside)
+        closeButton.imageView?.contentMode = .scaleAspectFill
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        return closeButton
+    }()
+    fileprivate lazy var flashButton : UIButton = {
+        let closeButton = UIButton(type: UIButtonType.custom)
+        closeButton.setImage(UIImage(named: "flash_active"), for: UIControlState.normal)
+        closeButton.addTarget(self, action: #selector(ParpeCameraViewController.flashAction), for: UIControlEvents.touchUpInside)
         closeButton.imageView?.contentMode = .scaleAspectFill
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         return closeButton
@@ -78,6 +86,7 @@ class ParpeCameraViewController: UIViewController {
         self.view.addSubview(self.captureView)
         self.view.addSubview(self.shotView)
         self.view.addSubview(self.closeButton)
+        self.view.addSubview(self.flashButton)        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -108,7 +117,12 @@ extension ParpeCameraViewController {
             self.closeButton.topAnchor.constraint(equalTo: self.captureView.layoutMarginsGuide.topAnchor),
             self.closeButton.leadingAnchor.constraint(equalTo: self.captureView.layoutMarginsGuide.leadingAnchor)
             ])
-        
+        NSLayoutConstraint.activate([
+            self.flashButton.widthAnchor.constraint(equalToConstant: 70),
+            self.flashButton.heightAnchor.constraint(equalToConstant: 70),
+            self.flashButton.topAnchor.constraint(equalTo: self.captureView.layoutMarginsGuide.topAnchor),
+            self.flashButton.trailingAnchor.constraint(equalTo: self.captureView.layoutMarginsGuide.trailingAnchor)
+            ])
         
         camera.setupPreviewLayer(view: self.captureView)
         setupShotShapLayer()
@@ -131,6 +145,9 @@ extension ParpeCameraViewController {
     }
     @objc public func dismissViewController() {
         self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    @objc public func flashAction() {
+        
     }
 }
 

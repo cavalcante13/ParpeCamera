@@ -87,6 +87,11 @@ extension ParpeCamera {
             }
         })
     }
+    
+    public func focus(touchPoint : CGPoint, view : UIView) {
+        let device = self.session?.inputs.last
+        
+    }
 }
 
 
