@@ -10,9 +10,21 @@ import UIKit
 
 class ViewController: UIViewController, ParpeCameraDelegate {
 
+    fileprivate lazy var navigationBarTransparent : UINavigationBar = {
+        let nav = self.navigationController?.navigationBar
+        nav?.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        nav?.shadowImage = UIImage()
+        nav?.isTranslucent = true
+        nav?.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName : UIFont.systemFont(ofSize: 20)]
+        return nav!
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.title = "Parpe Camera"
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        _ = navigationBarTransparent
     }
 
     override func didReceiveMemoryWarning() {
